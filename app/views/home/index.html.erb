@@ -1,0 +1,10 @@
+
+<%= form_tag '/createtweet' do%>
+<%= text_area_tag :content%>
+<br>
+<%= submit_tag "Submit"%>
+<%end%>
+
+<%@tweets.each do |tweet|%>
+<%= render 'tweet',:tweet =>tweet %>
+<%end%>
